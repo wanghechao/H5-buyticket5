@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.BigBox{
+    width: 400px;
+    height: 700px;
+}
+
+.NeiRon3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid black;
+    display: block;
+}
+
+.NeiRon3 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: fill;
+}
+
+.NeiRon3 .dlchange {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+}
+
+.NeiRon3 .dlchange div {
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 45%;
+    opacity: 0;
+}
+.NeiRon3 .dlchange :nth-child(odd) {
+    transform: translate(0px ,-10px );
+}
+
+.NeiRon3 .dlchange :nth-child(even) {
+    transform: translate(0px ,10px );
+}
+
+
+@keyframes dl_opacity {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes dl_allopacity {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.NeiRon3 .animateinside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+   
+.NeiRon3 .guanka {
+    width: 15%; 
+    height: 5%;
+    top:25% ;
+    left: 42%;
+    animation: text_animate 2s forwards ;
+}
+
+@keyframes text_animate {
+    0%{
+        transform: rotateY(0deg) scale(0);
+    }
+    100%{
+        transform: rotateY(360deg) scale(1);
+    }
+}
+
+/* 文字效果 */
+
+.text_chuxian {
+    position: absolute;
+    z-index: 99;
+    top: 35%;
+    left: 28%;
+    width: 0ch;
+    overflow: hidden;
+    animation: text_chuxian 4s steps(16) forwards;
+    white-space: nowrap;
+    text-align: center;
+}
+
+@keyframes text_chuxian {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 19ch;
+    }
+}
+
+/* 答题区域 */
+
+.NeiRon3 .wenti {
+    position: relative;
+    width: 60%;
+    height: 42%;
+    top: 42%;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.NeiRon3 .wenti .text_zuoti{
+    width: 35%;
+    height: 28%;
+    cursor: pointer;
+}
+
+
+@keyframes border_shansuo {
+    0%{
+        border: 2px solid black;
+    }
+    100%{
+        border:none;
+    }
+}
+
+.NeiRon3 .next_neiron {
+    position: absolute;
+    left: 42%;
+    bottom: 10%;
+    width: 15%;
+    height: 10%;
+    cursor: pointer;
+
+}
+
+@keyframes error {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/*跑马灯*/
+
+.pmd {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 96%;
+    height: 97%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.pmd::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent , rgb(118, 65, 65));
+    top: -50%;
+    left: 50%;
+    transform-origin: bottom left;
+    animation: pmd_rotate 2s linear infinite;
+}
+
+.pmd::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgb(118, 65, 65), transparent );
+    top: 50%;
+    left: -50%;
+    transform-origin: top right;
+    animation: pmd_rotate 2s linear infinite;
+}
+
+@keyframes pmd_rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.pmd_zhedan {
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 9;
+}
+
+.NeiRon3 .jump_btn {
+    width: 15%;
+    height: 10%;
+    bottom: 10%;
+    animation: jump_scale 2s linear infinite;
+}
+
+@keyframes jump_scale{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.NeiRon3 .fish {
+    width: 15%;
+    height: 10%;
+    bottom: 20%;
+}
+
+@keyframes fish_dodong{
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(160deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
+.NeiRon3 .yipaidl {
+    width: 90%;
+    height: 25%;
+    top: 0%;
+    opacity: 0.7;
+    animation: yipaidlMove 2s forwards;
+}
+
+@keyframes yipaidlMove{
+    0%{
+        transform: translate(0 , -200px);
+    }
+    100%{
+        transform: translate(0 , 0px);
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/five.css" type="text/css">
+    <script src="js/five.js"></script>
+
+    <style>
+        .pmd_zhedan {
+            background: url(img/Neiron2/beijing.png);
+            background-size: 115%;
+        }
+    </style>
+</head>
+<body>
+    <div class="BigBox">
+        <div class="NeiRon2">
+            <!-- 背景 -->
+            <img src="img/Neiron2/beijing.png" alt="" style="z-index: -10;">
+
+
+            
+            <div class="yanhua">
+                <img src="img/Neiron7/烟花1.png" alt="">
+                <img src="img/Neiron7/烟花2.png" alt="">
+                <img src="img/Neiron7/烟花3.png" alt="">
+            </div>
+
+                <!-- 这是跑马灯（不完美） -->
+                <div class="pmd" >
+                    <div class="pmd_zhedan">
+                        
+                    </div>
+                </div>
+                
+                <!-- 这是装各种画面的盒子 -->
+                <div class="NeiRon_inside">
+                    <!-- 这俩是不动的背景 -->
+                    <img src="img/Neiron2/边框.png" alt="">
+                    <img src="img/Neiron2/梅花.png" alt="" class="meihua">
+                    <!-- 这是用css的nth—childe功能做动画，第一个空div没用 -->
+                    <div class="animate2">
+                        <img src="img/Neiron2/左边灯笼.png" alt="">
+                        <img src="img/Neiron2/右边灯笼.png" alt="">
+                    </div>
+                    
+                </div>
+
+                <div class="center_flex">
+                    <img src="img/Neiron7/恭喜过关    .png" alt="">
+                    <img src="img/Neiron7/成功过关 获得定制出发地点的机会.png" alt="">
+                    <img src="img/Neiron7/边框.png" alt="">
+                    <img src="img/Neiron7/圆角矩形.png" alt="">
+                    <img src="img/Neiron7/生成车票.png" alt="">
+                </div>
+
+                <form action="last.html" method="get">
+                    <div class="allinput">
+                        <input type="text" name="chufadi" id="chufa" value="请输入出发地" maxlength="2">
+                        <input type="text" name="mudidi" id="mudi" value="请输入目的地"  maxlength="2">
+                    </div>
+                    <input class="next_btn" type="submit"></input>
+                </form>
+                
+        </div>
+    </div>
+</body>
+</html>
